@@ -8,7 +8,8 @@ feature 'Attacking' do
   scenario 'reduce points after attack' do
     sign_in_and_play
     click_button 'Attack'
-    # click_link 'OK'
+    # click_button 'OK'
+    expect(page).not_to have_content 'Oggie: 60HP'
     expect(page).to have_content 'Oggie: 50HP'
   end
 end
