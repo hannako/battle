@@ -16,12 +16,12 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'damages the player' do
-      expect(oggie).to receive(:receive_damage)
-      joe.attack(oggie)
-    end
-  end
+#  describe '#attack' do
+#    it 'damages the player' do
+#      expect(oggie).to receive(:receive_damage)
+#      joe.attack(oggie)
+#    end
+#  end
 
   describe '#receive_damage' do
     it 'reduces the player hit points' do
