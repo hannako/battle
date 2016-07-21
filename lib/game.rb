@@ -2,11 +2,12 @@ require_relative 'player.rb'
 
 class Game
 
-  attr_reader :current_turn
+  attr_reader :current_turn, :opponent
 
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
     @current_turn = player_1
+    @opponent = player_2
   end
 
   def player_1
@@ -22,6 +23,7 @@ class Game
   end
 
   def switch_turns
+    @opponent = @current_turn
     @current_turn = opponent_of(current_turn)
   end
 

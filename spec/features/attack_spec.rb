@@ -4,4 +4,12 @@ feature 'Attacking' do
     click_button 'Attack'
     expect(page).to have_content 'Joe attacked Oggie'
   end
+
+  scenario 'attack Player 1' do
+    sign_in_and_play
+    click_button 'Attack'
+    click_button 'Ok'
+    click_button 'Attack'
+    expect(page).to have_content 'Oggie attacked Joe'
+  end
 end

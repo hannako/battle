@@ -33,5 +33,12 @@ describe Game do
       game.switch_turns
         expect(game.current_turn).to eq player_2
     end
+
+    it 'creates an opponent' do
+      game.switch_turns
+      expect(game.opponent).to eq player_1
+    end
+
   end
+
 end
