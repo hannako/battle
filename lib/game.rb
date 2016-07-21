@@ -36,7 +36,7 @@ class Game
   end
 
   private
-  
+
   attr_reader :players
 
   def losing_players
